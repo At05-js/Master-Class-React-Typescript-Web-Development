@@ -1,11 +1,11 @@
-// // Logical OR
-// const test = 5 || 6;
-// const sample = 0 || false || null;
-// console.log(test);
-// console.log(sample);
+// let sample = 5;
+// let copySample = sample;
+// sample = 10;
+// console.log('sample ',sample);
+// console.log('copySample ',copySample);
 
-// // Logical AND
-// const test = 5 && 6;
-// const sample = 0 && false && null;
-// console.log(test);
-// console.log(sample);
+// let sample = {name:'Rysh'};
+// let copySample = sample;
+// sample.test = 'test';
+// console.log('sample ',sample);
+// console.log('copySample ',copySample);
