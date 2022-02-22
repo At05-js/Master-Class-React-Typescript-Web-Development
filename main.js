@@ -1,74 +1,39 @@
-// OBJECT
+// function sum(...thisArgs) {
+//     return thisArgs.reduce(function(previous, current) {
+//         return previous + current;
+//     })
+// }
+// console.log(sum(5,5,5))
 
-// const orig = {
-//     test: "test",
-//     userDetails: {
-//         address: {
-//             province: 'Province',
-//             country: 'country'
-//         },
-//         name: 'myObject'
+// const userDetails = {
+//     name: 'Rysh',
+//     address: 'Anywhere',
+//     sample: {
+//         test: 'test'
 //     }
 // }
-// const copy = orig;
-// copy.test = 'newTest';
-// console.log('orig',orig);
-// console.log('copy',copy);
+// const newUserDetails = {...userDetails, name: 'May' }
+// console.log('userDetails: ', userDetails);
+// console.log('newUserDetails: ', newUserDetails);
 
-// const orig = {
-//     test: "test",
-//     userDetails: {
-//         address: {
-//             province: 'Province',
-//             country: 'country'
-//         },
-//         name: 'myObject'
+// const fruits = [ 'apple', 'avocado']
+// const newFruits = [...fruits, 'guava']
+// console.log('fruits: ', fruits);
+// console.log('newFruits: ', newFruits);
+
+// const userDetails = {
+//     name: 'Rysh',
+//     address: 'Anywhere',
+//     sample: {
+//         test: 'test'
 //     }
 // }
-// const copy = Object.assign({}, orig);
-// copy.userDetails.name = 'newName';
-// console.log('orig',orig);
-// console.log('copy',copy);
+// const { name: newName = 'May', address, ...otherDetails } = userDetails;
+// console.log(newName);
+// console.log(address);
+// console.log(otherDetails);
 
-// const orig = {
-//     test: "test",
-//     userDetails: {
-//         address: {
-//             province: 'Province',
-//             country: 'country'
-//         },
-//         name: 'myObject'
-//     },
-//     myFn: () => {},
-//     undef: undefined,
-// }
-// const copy = JSON.parse(JSON.stringify(orig));
-// copy.userDetails.name = 'newName';
-// console.log('orig',orig);
-// console.log('copy',copy);
-
-// ARRAY
-
-// const orig = ['avocado', 'apple', { name: 'strawberry' }];
-// const copy = orig;
-// copy.push('guava');
-// console.log('orig: ', orig);
-// console.log('copy: ', copy);
-
-// const orig = ['avocado', 'apple', { name: 'strawberry' }];
-// const copy = orig.slice();
-// copy.push('guava');
-// console.log('orig: ', orig);
-// console.log('copy: ', copy);
-
-// const orig = ['avocado', 'apple', { name: 'strawberry' }];
-// const copy = orig.slice();
-// copy[2].name = 'coconut';
-// console.log('orig: ', orig);
-// console.log('copy: ', copy);
-
-const orig = ['avocado', 'apple', { name: 'strawberry' }];
-const copy = JSON.parse(JSON.stringify(orig));
-copy[2].name = 'coconut';
-console.log('orig: ', orig);
-console.log('copy: ', copy);
+// const fruits = [ undefined, 'guava', 'coconut'];
+// const [ firstFruit='strawberry', ...otherFruits ] = fruits;
+// console.log(firstFruit);
+// console.log(otherFruits);
