@@ -1,24 +1,69 @@
-// class Printer {
-//     name="I am Printer Class"
-//     printName() {
-//         console.log('printName: ', this.name);
-//     }
-//     printNameArrowFn=()=>{
-//         console.log('printNameArrowFn: ', this.name);
-//     }
+// function calculateSquareArea() {
+//     setTimeout(()=>{
+//         const squareArea = 5*5;
+//         console.log(squareArea);
+//     },500);
 // }
-// console.log(this);
-// this.console.log(this);
+// calculateSquareArea();
 
-// const myPrinter = new Printer();
-// myPrinter.printName();
-// myPrinter.printNameArrowFn();
-
-// const customPrinter = {
-//     name: 'I am Custom Printer',
-//     printName: myPrinter.printName,
-//     printNameArrowFn: myPrinter.printNameArrowFn,
+// function calculateSquareArea() {
+//     return new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             const squareArea = 5*5;
+//             resolve(squareArea);
+//             // reject(squareArea);
+//         },500);
+//     })
 // }
+// function onFulFilled(data) {
+//     console.log('onFulFilled: ',data);
+//     console.log('onFulFilled: ',data0);
+// }
+// function onRejected(data) {
+//     console.log('onRejected: ',data);
+// }
+// calculateSquareArea()
+// .then(onFulFilled)
+// .catch((reason) => { 
+//     console.log('catch: ',reason);
+// });
 
-// customPrinter.printName();
-// customPrinter.printNameArrowFn();
+// Promise.resolve('testresolve')
+// Promise.reject('testresolve')
+// calculateSquareArea()
+// .then(onFulFilled)
+// .catch((reason) => { 
+//     console.log('catch: ',reason);
+// });
+
+// const myPromises = [
+//     new Promise((resolve,reject) => setTimeout(resolve(100),500)),
+//     new Promise((resolve,reject) => setTimeout(resolve(200),500)),
+//     new Promise((resolve,reject) => setTimeout(resolve(300),500))
+//    new Promise((resolve,reject) => setTimeout(reject,500))
+// ];
+// function onFulFilled(data) {
+//     console.log('onFulFilled: ',data);
+// }
+// Promise.all(myPromises)
+// Promise.allSettled(myPromises)
+// Promise.any(myPromises)
+// .then(onFulFilled)
+// .catch((reason) => { 
+//     console.log('catch: ',reason);
+// });
+
+let myNumber = 5;
+function changeNumber() {
+    return new Promise((resolve) => {
+        setTimeout(()=> {
+            myNumber = 10;
+            resolve(myNumber);
+        },500);
+    })
+}
+async function startChange() {
+    await changeNumber();
+    console.log(myNumber);
+}
+startChange();
