@@ -1,39 +1,37 @@
-// function sum(...thisArgs) {
-//     return thisArgs.reduce(function(previous, current) {
-//         return previous + current;
-//     })
-// }
-// console.log(sum(5,5,5))
-
-// const userDetails = {
-//     name: 'Rysh',
-//     address: 'Anywhere',
-//     sample: {
-//         test: 'test'
+// class Shape {
+//     #privateVariable = 'privateVariable'
+//     publicVariable = 'publicVariable'
+//     static staticVariable = 'staticVariable'
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
+//     getArea() {
+//         return 'not implemented';
+//     }
+//     getPrivateData() {
+//         return this.#privateVariable;
 //     }
 // }
-// const newUserDetails = {...userDetails, name: 'May' }
-// console.log('userDetails: ', userDetails);
-// console.log('newUserDetails: ', newUserDetails);
 
-// const fruits = [ 'apple', 'avocado']
-// const newFruits = [...fruits, 'guava']
-// console.log('fruits: ', fruits);
-// console.log('newFruits: ', newFruits);
+// const myShape = new Shape(5,10);
+// console.log(myShape.publicVariable);
+// console.log(myShape.height);
+// console.log(myShape.width);
+// console.log(myShape.#privateVariable);
+// console.log(myShape.staticVariable);
+// console.log(Shape.staticVariable);
 
-// const userDetails = {
-//     name: 'Rysh',
-//     address: 'Anywhere',
-//     sample: {
-//         test: 'test'
+// class Square extends Shape {
+//     getArea() {
+//         return this.height * this.width;
+//     }
+//     getParentClassArea() {
+//         return super.getArea()
 //     }
 // }
-// const { name: newName = 'May', address, ...otherDetails } = userDetails;
-// console.log(newName);
-// console.log(address);
-// console.log(otherDetails);
 
-// const fruits = [ undefined, 'guava', 'coconut'];
-// const [ firstFruit='strawberry', ...otherFruits ] = fruits;
-// console.log(firstFruit);
-// console.log(otherFruits);
+// const mySquare = new Square(5,10);
+// console.log(mySquare.getArea());
+// console.log(mySquare.getParentClassArea());
+// console.log(mySquare.getPrivateData());
