@@ -1,37 +1,24 @@
-// class Shape {
-//     #privateVariable = 'privateVariable'
-//     publicVariable = 'publicVariable'
-//     static staticVariable = 'staticVariable'
-//     constructor(height, width) {
-//         this.height = height;
-//         this.width = width;
+// class Printer {
+//     name="I am Printer Class"
+//     printName() {
+//         console.log('printName: ', this.name);
 //     }
-//     getArea() {
-//         return 'not implemented';
-//     }
-//     getPrivateData() {
-//         return this.#privateVariable;
+//     printNameArrowFn=()=>{
+//         console.log('printNameArrowFn: ', this.name);
 //     }
 // }
+// console.log(this);
+// this.console.log(this);
 
-// const myShape = new Shape(5,10);
-// console.log(myShape.publicVariable);
-// console.log(myShape.height);
-// console.log(myShape.width);
-// console.log(myShape.#privateVariable);
-// console.log(myShape.staticVariable);
-// console.log(Shape.staticVariable);
+// const myPrinter = new Printer();
+// myPrinter.printName();
+// myPrinter.printNameArrowFn();
 
-// class Square extends Shape {
-//     getArea() {
-//         return this.height * this.width;
-//     }
-//     getParentClassArea() {
-//         return super.getArea()
-//     }
+// const customPrinter = {
+//     name: 'I am Custom Printer',
+//     printName: myPrinter.printName,
+//     printNameArrowFn: myPrinter.printNameArrowFn,
 // }
 
-// const mySquare = new Square(5,10);
-// console.log(mySquare.getArea());
-// console.log(mySquare.getParentClassArea());
-// console.log(mySquare.getPrivateData());
+// customPrinter.printName();
+// customPrinter.printNameArrowFn();
