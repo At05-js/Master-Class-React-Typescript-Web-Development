@@ -20,8 +20,7 @@ class App extends React.Component<{}, AppState> {
     return(
       <>
       <h1>My App</h1>
-      {this.state.change && <CounterManagement ownerName='josue'/>}
-      <button onClick={this.clickButton}>Change</button>
+      <CounterManagement ownerName='josue'/>
       </>
     )
   }
