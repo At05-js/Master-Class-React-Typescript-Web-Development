@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Profile from './components/Profile';
-import NewsFeed from './components/NewsFeed';
+import Fruits from './components/Fruits';
 
 export const App: React.FC = () => {
   return (
     <React.Fragment>
       <h1>My App</h1>
-      <Profile ownerName="Josue" />
-      <NewsFeed />
+      <Fruits />
     </React.Fragment>
   );
 }
