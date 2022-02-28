@@ -1,7 +1,11 @@
-export interface withTrackClickProps {}
-export interface withTrackClickState {
-    click:number;
+export interface withTrackClickProps {
+
 }
-export interface WrapperComponentState {
-    click:number;
+
+export interface withTrackClickState {
+    click: number;
+}
+
+export interface WrapperComponentProps {
+    click: number;
 }
