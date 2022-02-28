@@ -1,7 +1,8 @@
 import React from 'react'
+import { withTrackClick } from '../hoc/withTrackClick'
 import { ProfileProps } from './interface'
 
-export const Profile: React.FC<ProfileProps> = ({ click }) => {
+const Profile: React.FC<ProfileProps> = ({ click }) => {
   return (
     <div>
       <h1>Profile Component</h1>
@@ -9,3 +10,5 @@ export const Profile: React.FC<ProfileProps> = ({ click }) => {
     </div>
   )
 }
+
+export default withTrackClick(Profile);

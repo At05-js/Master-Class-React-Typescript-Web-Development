@@ -1,7 +1,8 @@
 import React from 'react'
+import { withTrackClick } from '../hoc/withTrackClick'
 import { NewsFeedProps } from './interface'
 
-export const NewsFeed:React.FC<NewsFeedProps> = ({ click }) => {
+const NewsFeed:React.FC<NewsFeedProps> = ({ click }) => {
   return (
     <div>
       <h1>NewsFeed Component</h1>
@@ -9,3 +10,4 @@ export const NewsFeed:React.FC<NewsFeedProps> = ({ click }) => {
     </div>
   )
 }
+export default withTrackClick(NewsFeed);
