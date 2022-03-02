@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import StudentGrade from './components/StudentGrade';
-import { Instruction } from './components/Instruction';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <Instruction />
-      <StudentGrade />
+    <div>
+      <HomePage />
     </div>
   );
 }
