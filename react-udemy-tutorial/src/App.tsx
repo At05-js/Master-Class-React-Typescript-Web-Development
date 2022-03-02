@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import { FormElements } from './components/FormElements';
+import StudentGrade from './components/StudentGrade';
+import { Instruction } from './components/Instruction';
 
 function App() {
   return (
     <div className="App">
-      <FormElements />
+      <Instruction />
+      <StudentGrade />
     </div>
   );
 }
