@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import HomePage from './components/HomePage';
+import { Instruction } from './components/Instruction';
+import MessageEveryday from './components/MessageEveryday';
 
 function App() {
   return (
     <div className='App'>
-      <HomePage />
+      <Instruction />
+      <MessageEveryday />
     </div>
   );
 }
