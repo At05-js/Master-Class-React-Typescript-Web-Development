@@ -1,4 +1,5 @@
 import React from 'react';
+import UserDetails from '../UserDetails';
 import { AboutPageProps } from './interface';
 
 class AboutPage extends React.Component<AboutPageProps> {
@@ -6,6 +7,7 @@ class AboutPage extends React.Component<AboutPageProps> {
         return (
             <div>
                 <h1> About Page </h1>
+                <UserDetails />
             </div>
         )
     }
