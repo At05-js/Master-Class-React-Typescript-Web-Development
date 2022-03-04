@@ -7,12 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route component={AboutPage} path="/about" />
-        <Route component={HomePage} path="/" />
-      </Switch>
-    </BrowserRouter>
+    <div className="App">
+      <Instruction />
+      <RoutingPractice />
+    </div>
   );
 }
 
