@@ -6,8 +6,9 @@ import AboutPage from './components/AboutPage';
 import { createStore } from 'redux';
 import { fruitsReducer } from './reducer/fruitsReducer';
 import { Provider } from 'react-redux';
+import { rootReducer } from './reducer/rootReducer';
 
-const store = createStore(fruitsReducer, ['apple', 'avocado']);
+const store = createStore(rootReducer, { users: ['Josue', 'May'], fruits: ['apple', 'avocado'] });
 
 function App() {
   return (
